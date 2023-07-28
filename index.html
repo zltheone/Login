@@ -51,6 +51,7 @@
         }
 
         .input-container {
+            border-bottom: 1px solid #ccc;
             display: flex;
             align-items: center;
         }
@@ -69,17 +70,22 @@
             /* margin-bottom: 10px; */
             border: none;
             /* 删除输入框的所有边框 */
-            border-bottom: 1px solid #ccc;
+            /* border-bottom: 1px solid #ccc; */
             /* 添加底部边框，实现下划线效果 */
             /* background-color: transparent; */
             /* 删除背景色 */
-            /* box-sizing: border-box; */
-            /* font-size: 16px; */
+            box-sizing: border-box;
+            font-size: 16px;
+            outline: none;
+            /* 移除获得焦点时的外边框 */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
         }
 
         /* 给获得焦点的输入框添加样式 */
         input[type="text"]:focus {
-            border-bottom: none;
+            /* border-bottom: 1px solid grey; */
             /* 添加以下样式 */
             outline: none;
             -webkit-appearance: none;
@@ -90,7 +96,8 @@
         input[type="password"]:focus {
             /* 获得焦点时底部边框改为橙色，可以根据需要调整颜色 */
             /* border-bottom: 2px solid #d38a2c; */
-            border-bottom: none;
+            /* border-bottom: 1px solid grey; */
+            /* border-bottom: none; */
             /* 添加以下样式 */
             outline: none;
             -webkit-appearance: none;
