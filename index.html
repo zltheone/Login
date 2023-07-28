@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Login Page</title>
+    <title>登录</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
@@ -27,16 +28,61 @@
 
         .login-image {
             max-width: 100%;
-            max-height: 120px; /* 设置最大高度，调整此值以适应您的需求 */
+            max-height: 120px;
+            /* 设置最大高度，调整此值以适应您的需求 */
             display: block;
             margin: 0 auto;
             margin-bottom: 20px;
         }
 
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            /* 调整标签和输入框之间的垂直距离 */
+        }
+
+        .input-label {
+            text-align: left;
+            font-size: 16px;
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .input-container label {
+            width: 80px;
+            /* 设置标签宽度，调整此值以适应您的需求 */
+            margin-right: 10px;
+            /* 调整标签和输入框之间的横向距离 */
+        }
+
         input[type="text"],
-        input[type="password"],
-        button {
+        input[type="password"] {
             width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            /* 删除边框 */
+            border-bottom: 1px solid #ccc;
+            /* 添加底部边框，实现下划线效果 */
+            background-color: transparent;
+            /* 删除背景色 */
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        /* 给获得焦点的输入框添加样式 */
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-bottom: 2px solid #d38a2c;
+            /* 获得焦点时底部边框改为橙色，可以根据需要调整颜色 */
+        }
+
+        button {
+            flex: 1;
             padding: 10px;
             margin-bottom: 10px;
             border: 1px solid #ccc;
@@ -46,7 +92,7 @@
         }
 
         button {
-            background-color: #4CAF50;
+            background-color: #d38a2c;
             color: #fff;
             cursor: pointer;
             /* 调整登录按钮与输入框之间的垂直距离 */
@@ -76,19 +122,24 @@
             text-align: center;
             margin-top: 10px;
         }
-
     </style>
 </head>
+
 <body>
     <div class="container">
         <img class="login-image" src="微信图片_20230728101824.jpg" alt="Login Image">
-        <!-- <h2>Login</h2> -->
-        <form>
-            <input type="text" placeholder="用户名">
-            <input type="password" placeholder="密码">
+        <form class="login-form">
+            <div class="input-container">
+                <label for="username" style="float:left; line-height:25px;">用户名：</label>
+                <input type="text" id="username" placeholder="请输入用户名">
+            </div>
+            <div class="input-container">
+                <label for="password">密码：</label>
+                <input type="password" id="password" placeholder="请输入密码">
+            </div>
             <div class="error-message" id="error-message" style="display: none;">您没有权限访问</div>
             <button type="button" onclick="login()">登录</button>
-            
+
         </form>
     </div>
     <script>
@@ -99,10 +150,11 @@
             errorMessage.style.display = "block";
 
             // 3秒后自动隐藏错误消息
-            setTimeout(function() {
+            setTimeout(function () {
                 errorMessage.style.display = "none";
             }, 3000); // 设置延迟时间为3秒 (3000毫秒)
         }
     </script>
 </body>
+
 </html>
