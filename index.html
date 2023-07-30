@@ -5,7 +5,7 @@
     <title>登录</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* 新增一个覆盖整个视口的容器 */
+        /* 新增一个覆盖整个视口的容器
         .background-container {
             position: absolute;
             top: 0;
@@ -22,6 +22,7 @@
             background-attachment: fixed; /*此条属性必须设置否则可能无效*/
             background-position: center;
         }
+        */
 
         body {
             height: 100%;
@@ -49,7 +50,8 @@
         h2 {
             text-align: center;
         }
-
+        
+        /*
         .login-image {
             max-width: 100%;
             max-height: 200px;
@@ -57,7 +59,7 @@
             display: block;
             margin: 0 auto;
             margin-bottom: 20px;
-        }
+        }*/
 
         .login-form {
             display: flex;
@@ -118,10 +120,10 @@
             margin-top: 120px;
         }
 
-        /* 调整图片和输入框之间的垂直距离 */
+        /* 调整图片和输入框之间的垂直距离
         .login-image {
             margin-bottom: 50px;
-        }
+        }*/
 
         @media screen and (max-width: 480px) {
             .container {
@@ -153,7 +155,7 @@
     <!-- 新增的覆盖整个视口的容器 -->
     <div class="background-container"></div>
     <div class="container">
-        <!-- <img class="login-image" src="微信图片_20230728150544.jpg" alt="Login Image"> -->
+        <img class="login-image" src="背景图.jpg" alt="Login Image"> -->
         <form class="login-form">
             <div class="input-container">
                 <label for="username" style="float:left; line-height:25px;">用户名：</label>
