@@ -5,25 +5,6 @@
     <title>登录</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* 新增一个覆盖整个视口的容器
-        .background-container {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            将容器放置在最底层
-            设置背景图像
-            background-image: url('背景图.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-        }
-        */
-
         body {
             height: 100%;
             font-family: Arial, sans-serif;
@@ -54,7 +35,7 @@
         }
 
         .login-image {
-            background-size: 100% auto;
+            background-size: cover;
             position: absolute;
             top: 0;
             left: 0;
@@ -65,7 +46,6 @@
             display: flex;
             margin: 0;
         }
-
 
         .input-container {
             border: 0;
@@ -127,34 +107,16 @@
             margin-top: 80px;
         }
 
-        /* 调整图片和输入框之间的垂直距离
-        .login-image {
-            margin-bottom: 50px;
-        }*/
-
-        @media screen and (max-width: 480px) {
-            /* .container { */
-            /* background-color: #ffffff; */
-            /* max-width: 100%; */
-            /* border-radius: 0; */
-            /* } */
-
-            .main {
-                /* background-color: #ffffff; */
-                width: 100%;
-                height: 100%;
-            }
+        @media screen {
+            
         }
-
-        /* 使用移动优化的CSS框架 */
-        /* @import url('http://maxcdn.bootstrapcdn.com/3.3.7/css/bootstrap.min.css'); */
-
 
         .error-message {
             color: grey;
             text-align: center;
             margin-top: 10px;
         }
+
     </style>
 </head>
 
