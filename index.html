@@ -43,15 +43,15 @@
             /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
             border-radius: 5px;
             /* 调整距离顶部的距离 */
-            margin-top: 80%;
+            /* margin-top: 80%; */
             /* margin-bottom: 10%;  */
         }
 
         h2 {
             text-align: center;
         }
-        
-        
+
+
         .login-image {
             position: absolute;
             top: 0;
@@ -69,7 +69,7 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
-            /* 调整标签和输入框之间的垂直距离 */
+            margin-top: 80%;
         }
 
         .input-container {
@@ -86,11 +86,22 @@
             /* 调整标签和输入框之间的横向距离 */
         }
 
+        .input-container img {
+            width: 20px;
+            /* 调整图片的宽度，根据您的需要进行调整 */
+            height: 20px;
+            /* 调整图片的高度，根据您的需要进行调整 */
+            margin-right: 10px;
+            /* 调整图片与输入框之间的水平距离，根据您的需要进行调整 */
+        }
+
+
         input {
             /* 设置输入框的背景为透明 */
             background: transparent;
         }
-        input::placeholder{
+
+        input::placeholder {
             color: #939292
         }
 
@@ -98,11 +109,9 @@
         input[type="password"] {
             width: 100%;
             padding: 10px;
-            /* margin-bottom: 10px; */
             border: none;
-            font-size: 16px;
+            font-size: 14px;
             outline: none;
-            /* 移除获得焦点时的外边框 */
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
@@ -130,9 +139,9 @@
 
         @media screen and (max-width: 480px) {
             /* .container { */
-                /* background-color: #ffffff; */
-                /* max-width: 100%; */
-                /* border-radius: 0; */
+            /* background-color: #ffffff; */
+            /* max-width: 100%; */
+            /* border-radius: 0; */
             /* } */
 
             .main {
@@ -157,15 +166,17 @@
 <body>
     <!-- 新增的覆盖整个视口的容器 -->
     <!--<div class="background-container"></div> -->
-    <img class="login-image" src="背景图.jpg" alt="Login Image">
+    <img class="login-image" src="img/背景图.jpg" alt="Login Image">
     <div class="container">
         <form class="login-form">
             <div class="input-container">
-                <label for="username" style="float:left; line-height:25px;">用户名：</label>
+                <img src="img/用户名.jpg" alt="用户名图片">
+                <!-- <label for="username" style="float:left; line-height:25px;">用户名：</label> -->
                 <input type="text" id="username" placeholder="请输入用户名">
             </div>
             <div class="input-container">
-                <label for="password">密码：</label>
+                <img src="img/密码.jpg" alt="密码图片">
+                <!-- <label for="password">密码：</label> -->
                 <input type="password" id="password" placeholder="请输入密码">
             </div>
             <div class="error-message" id="error-message" style="display: none;">您没有权限访问</div>
