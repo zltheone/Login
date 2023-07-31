@@ -39,20 +39,23 @@
             max-width: 400px;
             margin: 0 auto;
             padding: 20px;
-            /* background-color: #ffffff; */
-            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
             border-radius: 5px;
-            /* 调整距离顶部的距离 */
-            /* margin-top: 80%; */
-            /* margin-bottom: 10%;  */
+            margin-top: calc(100vh / 1.5);
         }
 
         h2 {
             text-align: center;
         }
 
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            /* margin-top: 80%; */
+        }
 
         .login-image {
+            background-size: 100% auto;
             position: absolute;
             top: 0;
             left: 0;
@@ -62,15 +65,8 @@
             object-fit: cover;
             display: flex;
             margin: 0;
-            /* margin-bottom: 20px; */
         }
 
-        .login-form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 80%;
-        }
 
         .input-container {
             border: 0;
@@ -170,18 +166,17 @@
     <div class="container">
         <form class="login-form">
             <div class="input-container">
-                <img src="img/用户名.jpg" alt="用户名图片">
+                <img src="img/用户名.png" alt="用户名图片">
                 <!-- <label for="username" style="float:left; line-height:25px;">用户名：</label> -->
                 <input type="text" id="username" placeholder="请输入用户名">
             </div>
             <div class="input-container">
-                <img src="img/密码.jpg" alt="密码图片">
+                <img src="img/密码.png" alt="密码图片">
                 <!-- <label for="password">密码：</label> -->
                 <input type="password" id="password" placeholder="请输入密码">
             </div>
             <div class="error-message" id="error-message" style="display: none;">您没有权限访问</div>
             <button type="button" onclick="login()">登录</button>
-
         </form>
     </div>
     <script>
